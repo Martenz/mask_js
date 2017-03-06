@@ -2,7 +2,7 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d');
 
-var truck, logo, overlay;
+var bkg_logo, tessuto;
 var newColor = "purple";
 
 var imageURLs = [];
@@ -27,8 +27,8 @@ function loadAllImages() {
 var imagesAllLoaded = function () {
     if (imagesOK == imageURLs.length) {
         // all images are fully loaded an ready to use
-        truck = imgs[0];
-        logo = imgs[1];
+        bkg_logo = imgs[0];
+        tessuto = imgs[1];
         start();
     }
 };
@@ -52,15 +52,15 @@ function start() {
     // any new drawing will not overwrite any existing pixels
     ctx.globalCompositeOperation = "destination-atop";
 
-    // draw the full logo
+    // draw the full tessuto
     // This will NOT overwrite any existing purple overlay pixels
-    ctx.drawImage(logo, 0, 0, 500, 500);
+    ctx.drawImage(tessuto, 0, 0, 500, 500);
 
-    // draw the truck
+    // draw the bkg_logo
     // This will NOT replace any existing pixels
     // The purple overlay will not be overwritten
     // The blue logo will not be overwritten
-    ctx.drawImage(truck, 0, 0, 500, 500);
+    ctx.drawImage(bkg_logo, 0, 0, 500, 500);
 
     // restore the context to it's original state
     ctx.restore();
