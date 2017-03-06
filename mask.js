@@ -27,8 +27,8 @@ function loadAllImages() {
 var imagesAllLoaded = function () {
     if (imagesOK == imageURLs.length) {
         // all images are fully loaded an ready to use
-        bkg_logo = imgs[0];
-        tessuto = imgs[1];
+        bkg_logo = imgs[1];
+        tessuto = imgs[0];
         start();
     }
 };
