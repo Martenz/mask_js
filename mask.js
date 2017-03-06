@@ -41,6 +41,9 @@ function start() {
     // save the context state
     ctx.save();
 
+    // draw the overlay
+    ctx.drawImage(overlay,0,0);
+   
     // change composite mode to source-in
     // any new drawing will only overwrite existing pixels
     ctx.globalCompositeOperation = "source-in";
@@ -56,13 +59,13 @@ function start() {
 
     // draw the full tessuto
     // This will NOT overwrite any existing purple overlay pixels
-    ctx.drawImage(tessuto, 0, 0, 500, 500);
+    ctx.drawImage(tessuto, 0, 0);
 
     // draw the bkg_logo
     // This will NOT replace any existing pixels
     // The purple overlay will not be overwritten
     // The blue logo will not be overwritten
-    ctx.drawImage(bkg_logo, 0, 0, 500, 500);
+    ctx.drawImage(bkg_logo, 0, 0);
 
     // restore the context to it's original state
     ctx.restore();
