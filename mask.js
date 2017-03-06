@@ -29,7 +29,6 @@ var imagesAllLoaded = function () {
         // all images are fully loaded an ready to use
         truck = imgs[0];
         logo = imgs[1];
-        overlay = imgs[2];
         start();
     }
 };
@@ -39,9 +38,6 @@ function start() {
 
     // save the context state
     ctx.save();
-
-    // draw the overlay
-    ctx.drawImage(overlay, 0, 0, 500, 500);
 
     // change composite mode to source-in
     // any new drawing will only overwrite existing pixels
