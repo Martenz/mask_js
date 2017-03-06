@@ -8,9 +8,8 @@ var newColor = "purple";
 var imageURLs = [];
 var imagesOK = 0;
 var imgs = [];
-imageURLs.push("https://dl.dropboxusercontent.com/u/139992952/stackoverflow/boxTruck.png");
-imageURLs.push("https://dl.dropboxusercontent.com/u/139992952/stackoverflow/TVlogoSmall.png");
-imageURLs.push("https://dl.dropboxusercontent.com/u/139992952/stackoverflow/TVlogoSmallOverlay.png");
+imageURLs.push("./imgs/b01_cn.png.png");
+imageURLs.push("./imgs/tx/b01_c01.png");
 loadAllImages();
 
 function loadAllImages() {
