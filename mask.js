@@ -10,6 +10,7 @@ var imagesOK = 0;
 var imgs = [];
 imageURLs.push("./imgs/b01_cn.png");
 imageURLs.push("./imgs/tx/b01_t01.png");
+imageURLs.push("./imgs/tx/b01_c01.png");
 loadAllImages();
 
 function loadAllImages() {
@@ -27,8 +28,9 @@ function loadAllImages() {
 var imagesAllLoaded = function () {
     if (imagesOK == imageURLs.length) {
         // all images are fully loaded an ready to use
-        bkg_logo = imgs[1];
-        tessuto = imgs[0];
+        bkg_logo = imgs[0];
+        tessuto = imgs[1];
+        overlay = imgs[2];
         start();
     }
 };
