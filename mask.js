@@ -1,3 +1,5 @@
+window.document.onload = function(e){
+    
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d');
 
@@ -75,3 +77,4 @@ function start() {
             start();
         });       
 
+};
