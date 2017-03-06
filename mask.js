@@ -41,7 +41,7 @@ function start() {
     ctx.save();
 
     // draw the overlay
-    ctx.drawImage(overlay, 150, 35);
+    ctx.drawImage(overlay, 0, 0);
 
     // change composite mode to source-in
     // any new drawing will only overwrite existing pixels
@@ -58,7 +58,7 @@ function start() {
 
     // draw the full logo
     // This will NOT overwrite any existing purple overlay pixels
-    ctx.drawImage(logo, 150, 35);
+    ctx.drawImage(logo, 0, 0);
 
     // draw the truck
     // This will NOT replace any existing pixels
