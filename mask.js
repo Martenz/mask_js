@@ -89,7 +89,8 @@ function start() {
     ctx.restore();
 
 }
-        $("#canvas").click(function(){
+
+$("#canvas").click(function(){
             nimg += 1; 
             //..the last element of the array is the main mask
             if ( nimg > imgs.length-1){
@@ -98,13 +99,13 @@ function start() {
             //console.log(nimg);
             //newColor='#'+Math.floor(Math.random()*16777215).toString(16);
             start();
-        });
+});
 
-         $(".f-imgs").click(function(){
-            console.log($(this).getAttribute('f_id'));
+$(".f-imgs").click(function(){
+            console.log($(this));
             nimg = parseInt($(this).getAttribute('f_id'));
             start();
-         });
+});
 
 for (var i = 0; i < imageURLs.length; i++) {
    $('#tessuti').append('<img class="f-imgs" f_id=' + i.toString() + ' src="' + imageURLs[i] + '" width="30%"></img>')
