@@ -10,22 +10,49 @@
 		
 		<div class="panel panel-default">
 		  <div class="panel-heading">
-		    <h3 class="panel-title">Scegli un tessuto</h3>
+		    <h3 class="panel-title">Combina Modelli e tessuti</h3>
 		  </div>
 		  <div class="panel-body">
 			<div class="row">
 			<div class="col-sm-12">
-				<div class="col-sm-8 text-center" id="configuratore">
+				<div class="col-sm-6 text-center" id="configuratore">
 				    <canvas height="500px" id="canvas" width="500px"></canvas>
 				    </div>
-				<div class="col-sm-4 text-center">
+				<div class="col-sm-3 text-center">
+					Scegli un Modello
+					<div id="modelli"></div>
+				</div>
+
+				<div class="col-sm-3 text-center">
+					Scegli un tessuto
 					<div id="tessuti"></div>
 				</div>
 			</div>
 		      </div>
+		    <div class="row">
+		       <form>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Email address</label>
+			    <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputName">Nome</label>
+			    <input type="text" class="form-control" id="exampleInputName" placeholder="Il tuo Nome">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputModello">Modello</label>
+			    <input type="text" class="form-control" id="exampleInputModello" placeholder="Seleziona un modello">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputTessuto">Tessuto</label>
+			    <input type="text" class="form-control" id="exampleInputTessuto" placeholder="Seleziona un tessuto">
+			  </div>
+
+			  <button type="submit" class="btn btn-default">Submit</button>
+			</form> 
+		    </div>
 		  </div>
-		</div>	
-	
+		</div>		
 </body>
 <script
   src="https://code.jquery.com/jquery-2.2.4.js"
