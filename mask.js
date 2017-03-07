@@ -8,9 +8,9 @@ var newColor = "purple";
 var imageURLs = [];
 var imagesOK = 0;
 var imgs = [];
-imageURLs.push("./imgs/b01_cn.png");
-imageURLs.push("./imgs/tx/b01_t01.png");
-imageURLs.push("./imgs/tx/b01_c01.png");
+imageURLs.push("./imgs/fabric/t2.png");
+imageURLs.push("./imgs/fabric/t1.png");
+imageURLs.push("./imgs/tx/b01_overlay.png");
 loadAllImages();
 
 function loadAllImages() {
