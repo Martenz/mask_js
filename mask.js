@@ -106,7 +106,7 @@ for (var i = 0; i < imageURLs.length; i++) {
 }
 
 $(".f-imgs").click(function(){
-   console.log($(this).attr("f_id"));
+   //console.log($(this).attr("f_id"));
    nimg = parseInt($(this).attr("f_id"));
    start();
 });
