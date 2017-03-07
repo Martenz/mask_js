@@ -45,7 +45,7 @@ function loadAllImages() {
             imagesOK++;
             imagesAllLoaded();
         };
-        overlays.src = overlayURLs[i];   
+        img.src = overlayURLs[i];   
    }
 }
 
