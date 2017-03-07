@@ -24,6 +24,8 @@ overlayURLs.push("./imgs/models/b02_overlay.png");
 imageURLs.push("./imgs/fabric/t1.png");
 imageURLs.push("./imgs/fabric/t2.png");
 imageURLs.push("./imgs/fabric/t3.png");
+imageURLs.push("./imgs/fabric/t4.png");
+imageURLs.push("./imgs/fabric/t5.png");
 
 loadAllImages();
 
