@@ -82,7 +82,7 @@ function start() {
 
 }
 
-$("#canvas").click(function(){
+/*$("#canvas").click(function(){
             nimg += 1; 
             //..the last element of the array is the main mask
             if ( nimg > imgs.length-1){
@@ -91,7 +91,7 @@ $("#canvas").click(function(){
             //console.log(nimg);
             //newColor='#'+Math.floor(Math.random()*16777215).toString(16);
             start();
-});
+});*/
 
 for (var i = 0; i < imageURLs.length; i++) {
    $('#tessuti').append('<img class="f-imgs" f_id=' + i.toString() + ' src="' + imageURLs[i] + '" width="30%"></img>')
