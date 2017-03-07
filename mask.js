@@ -110,11 +110,11 @@ function start() {
 });*/
 
 for (var i = 0; i < overlayURLs.length; i++) {
-   $('#modelli').append('<img class="m-imgs" m_id=' + i.toString() + ' src="' + overlayURLs[i] + '" width="30%"></img>')
+   $('#modelli').append('<img class="m-imgs" m_id=' + i.toString() + ' src="' + overlayURLs[i] + '" width="50%"></img>')
 }
 
 for (var i = 0; i < imageURLs.length; i++) {
-   $('#tessuti').append('<img class="f-imgs" f_id=' + i.toString() + ' src="' + imageURLs[i] + '" width="30%"></img>')
+   $('#tessuti').append('<img class="f-imgs" f_id=' + i.toString() + ' src="' + imageURLs[i] + '" width="50%"></img>')
 }
 
 $(".m-imgs").click(function(){
