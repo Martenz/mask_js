@@ -55,6 +55,9 @@ function start() {
     // save the context state
     ctx.save();
 
+    //clean the canvas
+    ctx.clearRect(0, 0, hhc, hhc);
+   
     // draw the overlay
     ctx.drawImage(overlay,0,0,hhc,hhc);
    
@@ -89,7 +92,7 @@ function start() {
         $("#canvas").click(function(){
             nimg += 1; 
             //..the last element of the array is the main mask
-            if ( nimg > fabrics.length-1){
+            if ( nimg > imgs.length-1){
               nimg = 0;
             }
             console.log(nimg);
