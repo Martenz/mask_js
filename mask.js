@@ -101,12 +101,12 @@ $("#canvas").click(function(){
             start();
 });
 
-$(".f-imgs").click(function(){
-            console.log($(this));
-            nimg = parseInt($(this).getAttribute('f_id'));
-            start();
-});
-
 for (var i = 0; i < imageURLs.length; i++) {
    $('#tessuti').append('<img class="f-imgs" f_id=' + i.toString() + ' src="' + imageURLs[i] + '" width="30%"></img>')
 }
+
+$(".f-imgs").click(function(){
+            console.log($(this).getAttribute('f_id'));
+            nimg = parseInt($(this).getAttribute('f_id'));
+            start();
+});
