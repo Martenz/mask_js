@@ -101,11 +101,11 @@ function start() {
         });
 
          $(".f-imgs").click(function(){
-            console.log($(this).value());
-            nimg = parseInt($(this).value());
+            console.log($(this).getAttribute('f_id'));
+            nimg = parseInt($(this).getAttribute('f_id'));
             start();
          });
 
 for (var i = 0; i < imageURLs.length; i++) {
-   $('#tessuti').append('<img class="f-imgs" value=' + i.toString() + ' src="' + imageURLs[i] + '" width="30%"></img>')
+   $('#tessuti').append('<img class="f-imgs" f_id=' + i.toString() + ' src="' + imageURLs[i] + '" width="30%"></img>')
 }
