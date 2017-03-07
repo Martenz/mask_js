@@ -8,8 +8,8 @@ var newColor = "purple";
 var imageURLs = [];
 var imagesOK = 0;
 var imgs = [];
-imageURLs.push("./imgs/fabric/t2.png");
-imageURLs.push("./imgs/fabric/t1.png");
+imageURLs.push("./imgs/fabric/t2.jpg");
+imageURLs.push("./imgs/fabric/t1.jpg");
 imageURLs.push("./imgs/tx/b01_overlay.png");
 loadAllImages();
 
