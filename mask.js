@@ -4,10 +4,14 @@ var ctx = canvas.getContext('2d');
 
 var bkg_logo, tessuto;
 var newColor = "purple";
+var hhc = 500;
 
 var imageURLs = [];
 var imagesOK = 0;
 var imgs = [];
+
+var nimg = 0;
+
 imageURLs.push("./imgs/fabric/t2.jpg");
 imageURLs.push("./imgs/fabric/t1.jpg");
 imageURLs.push("./imgs/b01_overlay.png");
@@ -50,8 +54,8 @@ function start() {
 
     // draw a purple rectangle the size of the canvas
     // Only the overlay will become purple
-    ctx.fillStyle = newColor;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    //ctx.fillStyle = newColor;
+    //ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // change the composite mode to destination-atop
     // any new drawing will not overwrite any existing pixels
@@ -59,20 +63,26 @@ function start() {
 
     // draw the full tessuto
     // This will NOT overwrite any existing purple overlay pixels
-    ctx.drawImage(tessuto, 0, 0);
+    //ctx.drawImage(tessuto, 0, 0,hhc,hhc);
+    ctx.drawImage(imgs[nimg], 0, 0,hhc,hhc);
 
     // draw the bkg_logo
     // This will NOT replace any existing pixels
     // The purple overlay will not be overwritten
     // The blue logo will not be overwritten
-    ctx.drawImage(bkg_logo, 0, 0);
+    //ctx.drawImage(bkg_logo, 0, 0,hhc,hhc);
 
     // restore the context to it's original state
     ctx.restore();
 
 }
         $("#canvas").click(function(){
-            newColor='#'+Math.floor(Math.random()*16777215).toString(16);
+            nimg += 1; 
+            //..the last element of the array is the main mask
+            if ( nimg > imgs.length - 1){
+              nimg = 0;
+            }
+            //newColor='#'+Math.floor(Math.random()*16777215).toString(16);
             start();
         });       
 
