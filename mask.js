@@ -15,6 +15,9 @@ var fabrics = [];
 var nimg = 0;
 
 var overlay = new Image();
+
+$('canvas').css('width',$('#configuratore').width().toString());
+
 overlay.src = "./imgs/b01_overlay.png";
 
 imageURLs.push("./imgs/fabric/t1.png");
