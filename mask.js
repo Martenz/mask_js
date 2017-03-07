@@ -16,8 +16,8 @@ var nimg = 0;
 
 var overlay = new Image();
 
-$('canvas').css('width','100%');
-$('canvas').css('heigth','100%');
+$('canvas').css('width','80%');
+$('canvas').css('heigth','80%');
 
 overlay.src = "./imgs/b01_overlay.png";
 
