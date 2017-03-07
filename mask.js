@@ -9,7 +9,7 @@ var hhc = 500;
 var imageURLs = [];
 var imagesOK = 0;
 var imgs = [];
-var overlay = "./imgs/b01_overlay.png";
+var overlay;
 
 var nimg = 0;
 
@@ -36,6 +36,7 @@ var imagesAllLoaded = function () {
         //bkg_logo = imgs[0];
         //tessuto = imgs[1];
         //overlay = imgs[2];
+        overlay = "./imgs/b01_overlay.png";
         start();
     }
 };
