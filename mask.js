@@ -20,7 +20,7 @@ overlay.src = "./imgs/b01_overlay.png";
 imageURLs.push("./imgs/fabric/t1.png");
 imageURLs.push("./imgs/fabric/t2.png");
 imageURLs.push("./imgs/fabric/t3.png");
-//imageURLs.push("./imgs/b01_overlay.png");
+
 loadAllImages();
 
 function loadAllImages() {
@@ -37,14 +37,6 @@ function loadAllImages() {
 
 var imagesAllLoaded = function () {
     if (imagesOK == imageURLs.length) {
-        // all images are fully loaded an ready to use
-        //bkg_logo = imgs[0];
-        //tessuto = imgs[1];
-        //for (var i = 0; i < imageURLs.length-1; i++) {
-        // fabrics.push(imgs[i]);
-        //}
-        //overlay = imgs[imgs.length - 1];
-
         start();
     }
 };
