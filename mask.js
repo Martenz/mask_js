@@ -86,7 +86,7 @@ function start() {
         $("#canvas").click(function(){
             nimg += 1; 
             //..the last element of the array is the main mask
-            if ( nimg > fabrics.length){
+            if ( nimg > fabrics.length-1){
               nimg = 0;
             }
             console.log(nimg);
