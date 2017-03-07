@@ -4,7 +4,7 @@ var ctx = canvas.getContext('2d');
 
 var bkg_logo, tessuto;
 var newColor = "purple";
-var hhc = 500;
+var hhc = $('canvas').height();
 
 var imageURLs = [];
 var imagesOK = 0;
