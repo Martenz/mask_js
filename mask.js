@@ -127,5 +127,5 @@ $(".f-imgs").click(function(){
    start();
 });
 
-$('canvas').css('width','80%');
-$('canvas').css('height','80%');
+$('canvas').css('width','100%');
+$('canvas').css('height','100%');
