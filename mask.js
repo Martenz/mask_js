@@ -12,11 +12,14 @@ var imgs = [];
 
 var fabrics = [];
 
+var novr = 0;
 var nimg = 0;
 
-var overlay = new Image();
+var overlayURLs = [];
+var overlays = [];
 
-overlay.src = "./imgs/b01_overlay.png";
+overlayURLs.push("./imgs/models/b01_overlay.png");
+overlayURLs.push("./imgs/models/b02_overlay.png");
 
 imageURLs.push("./imgs/fabric/t1.png");
 imageURLs.push("./imgs/fabric/t2.png");
@@ -34,6 +37,16 @@ function loadAllImages() {
         };
         img.src = imageURLs[i];
     }
+   
+   for (var i = 0; i < overlayURLs.length; i++) {
+        var img = new Image();
+        overlays.push(img);
+        overlays.onload = function () {
+            imagesOK++;
+            imagesAllLoaded();
+        };
+        overlays.src = overlayURLs[i];   
+   }
 }
 
 var imagesAllLoaded = function () {
@@ -52,7 +65,7 @@ function start() {
     ctx.clearRect(0, 0, hhc, hhc);
    
     // draw the overlay
-    ctx.drawImage(overlay,0,0,hhc,hhc);
+    ctx.drawImage(overlays[novr],0,0,hhc,hhc);
    
     // change composite mode to source-in
     // any new drawing will only overwrite existing pixels
@@ -94,9 +107,19 @@ function start() {
             start();
 });*/
 
+for (var i = 0; i < overlayURLs.length; i++) {
+   $('#modelli').append('<img class="m-imgs" m_id=' + i.toString() + ' src="' + overlayURLs[i] + '" width="30%"></img>')
+}
+
 for (var i = 0; i < imageURLs.length; i++) {
    $('#tessuti').append('<img class="f-imgs" f_id=' + i.toString() + ' src="' + imageURLs[i] + '" width="30%"></img>')
 }
+
+$(".f-imgs").click(function(){
+   //console.log($(this).attr("f_id"));
+   novr = parseInt($(this).attr("m_id"));
+   start();
+});
 
 $(".f-imgs").click(function(){
    //console.log($(this).attr("f_id"));
