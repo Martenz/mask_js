@@ -16,9 +16,6 @@ var nimg = 0;
 
 var overlay = new Image();
 
-$('canvas').css('width','80%');
-$('canvas').css('height','80%');
-
 overlay.src = "./imgs/b01_overlay.png";
 
 imageURLs.push("./imgs/fabric/t1.png");
@@ -106,3 +103,6 @@ $(".f-imgs").click(function(){
    nimg = parseInt($(this).attr("f_id"));
    start();
 });
+
+$('canvas').css('width','80%');
+$('canvas').css('height','80%');
