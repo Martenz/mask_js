@@ -95,10 +95,17 @@ function start() {
             if ( nimg > imgs.length-1){
               nimg = 0;
             }
-            console.log(nimg);
+            //console.log(nimg);
             //newColor='#'+Math.floor(Math.random()*16777215).toString(16);
             start();
-        });       
+        });
+
+         $(".f-imgs").click(function(){
+            console.log($(this).value());
+            nimg = parseInt($(this).value());
+            start();
+         });
+
 for (var i = 0; i < imageURLs.length; i++) {
-   $('#tessuti').append('<p><img class="f-imgs" value=' + i.toString() + ' src="' + imageURLs[i] + '" width="30%"></img></p>')
+   $('#tessuti').append('<img class="f-imgs" value=' + i.toString() + ' src="' + imageURLs[i] + '" width="30%"></img>')
 }
