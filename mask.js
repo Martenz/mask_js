@@ -9,13 +9,13 @@ var hhc = 500;
 var imageURLs = [];
 var imagesOK = 0;
 var imgs = [];
-var overlay;
 
 var nimg = 0;
 
 imageURLs.push("./imgs/fabric/t1.png");
 imageURLs.push("./imgs/fabric/t2.png");
 imageURLs.push("./imgs/fabric/t3.png");
+imageURLs.push("./imgs/b01_overlay.png");
 loadAllImages();
 
 function loadAllImages() {
@@ -35,8 +35,8 @@ var imagesAllLoaded = function () {
         // all images are fully loaded an ready to use
         //bkg_logo = imgs[0];
         //tessuto = imgs[1];
-        //overlay = imgs[2];
-        overlay = "./imgs/b01_overlay.png";
+        overlay = imgs[imgs.length - 1];
+
         start();
     }
 };
@@ -81,7 +81,7 @@ function start() {
         $("#canvas").click(function(){
             nimg += 1; 
             //..the last element of the array is the main mask
-            if ( nimg > imgs.length){
+            if ( nimg > imgs.length-1){
               nimg = 0;
             }
             //newColor='#'+Math.floor(Math.random()*16777215).toString(16);
