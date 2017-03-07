@@ -10,6 +10,8 @@ var imageURLs = [];
 var imagesOK = 0;
 var imgs = [];
 
+var fabrics = [];
+
 var nimg = 0;
 
 imageURLs.push("./imgs/fabric/t1.png");
@@ -35,6 +37,9 @@ var imagesAllLoaded = function () {
         // all images are fully loaded an ready to use
         //bkg_logo = imgs[0];
         //tessuto = imgs[1];
+        for (var i = 0; i < imageURLs.length-1; i++) {
+         fabrics.push(imgs[i]);
+        }
         overlay = imgs[imgs.length - 1];
 
         start();
@@ -66,7 +71,7 @@ function start() {
     // draw the full tessuto
     // This will NOT overwrite any existing purple overlay pixels
     //ctx.drawImage(tessuto, 0, 0,hhc,hhc);
-    ctx.drawImage(imgs[nimg], 0, 0,hhc,hhc);
+    ctx.drawImage(fabrics[nimg], 0, 0,hhc,hhc);
 
     // draw the bkg_logo
     // This will NOT replace any existing pixels
@@ -81,9 +86,10 @@ function start() {
         $("#canvas").click(function(){
             nimg += 1; 
             //..the last element of the array is the main mask
-            if ( nimg > imgs.length-1){
+            if ( nimg > fabrics.length){
               nimg = 0;
             }
+            console.log(nimg);
             //newColor='#'+Math.floor(Math.random()*16777215).toString(16);
             start();
         });       
