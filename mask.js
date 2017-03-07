@@ -46,7 +46,7 @@ function start() {
     ctx.save();
 
     // draw the overlay
-    ctx.drawImage(overlay,0,0);
+    ctx.drawImage(overlay,0,0,hhc,hhc);
    
     // change composite mode to source-in
     // any new drawing will only overwrite existing pixels
