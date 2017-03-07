@@ -99,4 +99,6 @@ function start() {
             //newColor='#'+Math.floor(Math.random()*16777215).toString(16);
             start();
         });       
-
+for (var i = 0; i < imageURLs.length; i++) {
+   $('#tessuti').append('<p><img class="f-imgs" value=' + i.toString() + 'src="' + imageURLs[] + '"></img></p>')
+}
